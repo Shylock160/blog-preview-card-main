@@ -1,3 +1,26 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Font  */
 @font-face {
   font-family: 'Figtree';
   src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype');
@@ -27,5 +50,75 @@
 }
 
 body {
-  font-family: var(--Font-family);
+  font-family: var(--font-family);
+  background-color: var(--yellow);
+}
+
+/* main content */
+
+main{
+  margin-block:30px ;
+}
+
+#body-container{
+  margin: 0 auto;
+  width: 400px;
+  background-color: var(--white);
+  padding: 20px 0 20px 20px;
+  border: 2px solid var(--gray-950);
+  border-radius: 20px;
+  box-shadow: 10px 10px 2px 1px rgb(0, 0, 0);
+}
+
+.image-icon img{
+  width: 95%;
+  height: auto;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+#text-box{
+  margin-bottom: 20px;
+}
+
+#text-box > *{
+  margin-bottom: 10px;
+}
+
+.color-text{
+  background-color: var(--yellow);
+  padding: 3px 3px 3px 10px;
+  width: 25%;
+}
+
+h4, p{
+  opacity: 0.8;
+}
+
+p{
+  line-height: 1.5;
+}
+
+/* footer */
+#user-icon .user-info{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+/* Active-State Styles */
+
+h2 a {
+  text-decoration: none;
+  color: var(--gray-950);
+  transition: color 0.3s ease;
+}
+
+h2 a:hover {
+  color: var(--yellow);
+}
+
+h2 a:focus {
+  color: var(--yellow);
 }
